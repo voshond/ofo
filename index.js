@@ -33,7 +33,7 @@ app.use(route('get', '/', function(req, res){
   var query = req.query.q;
   db.get(query, function(err, password){
     res.render('index', { 
-      response: query,
+      query   : query,
       password: password
     });
   });
@@ -44,7 +44,7 @@ app.use(route('/submit', function(req, res){
     var key = req.body.number;
     var val = req.body.password;
     db.put(key, val, function(err){
-      res.render('submit', { response: !err });
+      res.render('submit', { success: !err });
     });
   }else{
     res.render('submit');
