@@ -15,9 +15,9 @@ const app = kelp();
 
 const db = level('ofo.db');
 
-app.use(logger);
 app.use(send);
 app.use(body);
+app.use(logger);
 app.use(serve('public'));
 app.use(render({
   templates: 'views',
@@ -29,7 +29,7 @@ app.use(render({
   }
 }));
 
-app.use(route('get', '/', function(req, res){
+app.use(route('/', function(req, res){
   var query = req.query.q;
   db.get(query, function(err, password){
     res.render('index', { 
@@ -49,6 +49,10 @@ app.use(route('/submit', function(req, res){
   }else{
     res.render('submit');
   }
+}));
+
+app.use(route('/tos', function(req, res){
+  res.render('terms');
 }));
 
 app.use(function(req, res){
