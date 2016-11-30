@@ -18,9 +18,27 @@ abstract-leveldown@~2.6.1:
   dependencies:
     xtend "~4.0.0"
 
+acorn-globals@^1.0.3:
+  version "1.0.9"
+  resolved "http://r.npm.sankuai.com/acorn-globals/download/acorn-globals-1.0.9.tgz#55bb5e98691507b74579d0513413217c380c54cf"
+  dependencies:
+    acorn "^2.1.0"
+
+acorn@^1.0.1:
+  version "1.2.2"
+  resolved "http://r.npm.sankuai.com/acorn/download/acorn-1.2.2.tgz#c8ce27de0acc76d896d2b1fad3df588d9e82f014"
+
+acorn@^2.1.0:
+  version "2.7.0"
+  resolved "http://r.npm.sankuai.com/acorn/download/acorn-2.7.0.tgz#ab6e7d9d886aaca8b085bc3312b79a198433f0e7"
+
 after@~0.8.1:
   version "0.8.2"
   resolved "http://r.npm.sankuai.com/after/download/after-0.8.2.tgz#fedb394f9f0e02aa9768e702bda23b505fae7e1f"
+
+amdefine@>=0.0.4:
+  version "1.0.1"
+  resolved "http://r.npm.sankuai.com/amdefine/download/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
 ansi-regex@^2.0.0:
   version "2.0.0"
@@ -53,6 +71,10 @@ array-index@^1.0.0:
   dependencies:
     debug "^2.2.0"
     es6-symbol "^3.0.2"
+
+asap@~1.0.0:
+  version "1.0.0"
+  resolved "http://r.npm.sankuai.com/asap/download/asap-1.0.0.tgz#b2a45da5fdfa20b0496fc3768cc27c12fa916a7d"
 
 asn1@~0.2.3:
   version "0.2.3"
@@ -145,11 +167,28 @@ chalk@^1.1.1:
     strip-ansi "^3.0.0"
     supports-color "^2.0.0"
 
+character-parser@1.2.1:
+  version "1.2.1"
+  resolved "http://r.npm.sankuai.com/character-parser/download/character-parser-1.2.1.tgz#c0dde4ab182713b919b970959a123ecc1a30fcd6"
+
+clean-css@^3.1.9:
+  version "3.4.21"
+  resolved "http://r.npm.sankuai.com/clean-css/download/clean-css-3.4.21.tgz#2101d5dbd19d63dbc16a75ebd570e7c33948f65b"
+  dependencies:
+    commander "2.8.x"
+    source-map "0.4.x"
+
 combined-stream@^1.0.5, combined-stream@~1.0.5:
   version "1.0.5"
   resolved "http://r.npm.sankuai.com/combined-stream/download/combined-stream-1.0.5.tgz#938370a57b4a51dea2c77c15d5c5fdf895164009"
   dependencies:
     delayed-stream "~1.0.0"
+
+commander@2.8.x:
+  version "2.8.1"
+  resolved "http://r.npm.sankuai.com/commander/download/commander-2.8.1.tgz#06be367febfda0c330aa1e2a072d3dc9762425d4"
+  dependencies:
+    graceful-readlink ">= 1.0.0"
 
 commander@^2.9.0:
   version "2.9.0"
@@ -157,9 +196,19 @@ commander@^2.9.0:
   dependencies:
     graceful-readlink ">= 1.0.0"
 
+commander@~2.6.0:
+  version "2.6.0"
+  resolved "http://r.npm.sankuai.com/commander/download/commander-2.6.0.tgz#9df7e52fb2a0cb0fb89058ee80c3104225f37e1d"
+
 concat-map@0.0.1:
   version "0.0.1"
   resolved "http://r.npm.sankuai.com/concat-map/download/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
+
+constantinople@~3.0.1:
+  version "3.0.2"
+  resolved "http://r.npm.sankuai.com/constantinople/download/constantinople-3.0.2.tgz#4b945d9937907bcd98ee575122c3817516544141"
+  dependencies:
+    acorn "^2.1.0"
 
 core-util-is@~1.0.0:
   version "1.0.2"
@@ -170,6 +219,21 @@ cryptiles@2.x.x:
   resolved "http://r.npm.sankuai.com/cryptiles/download/cryptiles-2.0.5.tgz#3bdfecdc608147c1c67202fa291e7dca59eaa3b8"
   dependencies:
     boom "2.x.x"
+
+css-parse@1.0.4:
+  version "1.0.4"
+  resolved "http://r.npm.sankuai.com/css-parse/download/css-parse-1.0.4.tgz#38b0503fbf9da9f54e9c1dbda60e145c77117bdd"
+
+css-stringify@1.0.5:
+  version "1.0.5"
+  resolved "http://r.npm.sankuai.com/css-stringify/download/css-stringify-1.0.5.tgz#b0d042946db2953bb9d292900a6cb5f6d0122031"
+
+css@~1.0.8:
+  version "1.0.8"
+  resolved "http://r.npm.sankuai.com/css/download/css-1.0.8.tgz#9386811ca82bccc9ee7fb5a732b1e2a317c8a3e7"
+  dependencies:
+    css-parse "1.0.4"
+    css-stringify "1.0.5"
 
 d@^0.1.1, d@~0.1.1:
   version "0.1.1"
@@ -458,6 +522,14 @@ is-my-json-valid@^2.12.4:
     jsonpointer "^4.0.0"
     xtend "^4.0.0"
 
+is-promise@^2.0.0:
+  version "2.1.0"
+  resolved "http://r.npm.sankuai.com/is-promise/download/is-promise-2.1.0.tgz#79a2a9ece7f096e80f36d2b2f3bc16c1ff4bf3fa"
+
+is-promise@~1:
+  version "1.0.1"
+  resolved "http://r.npm.sankuai.com/is-promise/download/is-promise-1.0.1.tgz#31573761c057e33c2e91aab9e96da08cefbe76e5"
+
 is-property@^1.0.0:
   version "1.0.2"
   resolved "http://r.npm.sankuai.com/is-property/download/is-property-1.0.2.tgz#57fe1c4e48474edd65b09911f26b1cd4095dda84"
@@ -481,6 +553,20 @@ isexe@^1.1.1:
 isstream@~0.1.2:
   version "0.1.2"
   resolved "http://r.npm.sankuai.com/isstream/download/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
+
+jade@^1.11.0:
+  version "1.11.0"
+  resolved "http://r.npm.sankuai.com/jade/download/jade-1.11.0.tgz#9c80e538c12d3fb95c8d9bb9559fa0cc040405fd"
+  dependencies:
+    character-parser "1.2.1"
+    clean-css "^3.1.9"
+    commander "~2.6.0"
+    constantinople "~3.0.1"
+    jstransformer "0.0.2"
+    mkdirp "~0.5.0"
+    transformers "2.1.0"
+    void-elements "~2.0.1"
+    with "~4.0.0"
 
 jodid25519@^1.0.0:
   version "1.0.2"
@@ -528,6 +614,13 @@ jsprim@^1.2.2:
     json-schema "0.2.3"
     verror "1.3.6"
 
+jstransformer@0.0.2:
+  version "0.0.2"
+  resolved "http://r.npm.sankuai.com/jstransformer/download/jstransformer-0.0.2.tgz#7aae29a903d196cfa0973d885d3e47947ecd76ab"
+  dependencies:
+    is-promise "^2.0.0"
+    promise "^6.0.1"
+
 kelp-body@^1.2.0:
   version "1.2.0"
   resolved "http://r.npm.sankuai.com/kelp-body/download/kelp-body-1.2.0.tgz#55e35a2bb77297e6552c0ed4d40cdfa5dd6dc529"
@@ -547,6 +640,10 @@ kelp-config@^1.2.3:
 kelp-logger@^1.1.0:
   version "1.1.0"
   resolved "http://r.npm.sankuai.com/kelp-logger/download/kelp-logger-1.1.0.tgz#08e83e67ac42997b55a6560a78f5888e2c90426d"
+
+kelp-render@^1.0.1:
+  version "1.0.1"
+  resolved "http://r.npm.sankuai.com/kelp-render/download/kelp-render-1.0.1.tgz#2d0a41e9b9a6cb0e71d8dfeb5989da6b016f5751"
 
 kelp-route@^2.0.0:
   version "2.0.0"
@@ -662,7 +759,7 @@ minimist@0.0.8:
   version "0.0.8"
   resolved "http://r.npm.sankuai.com/minimist/download/minimist-0.0.8.tgz#857fcabfc3397d2625b8228262e86aa7a011b05d"
 
-"mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1:
+"mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0:
   version "0.5.1"
   resolved "http://r.npm.sankuai.com/mkdirp/download/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
   dependencies:
@@ -754,6 +851,12 @@ once@~1.3.0:
   dependencies:
     wrappy "1"
 
+optimist@~0.3.5:
+  version "0.3.7"
+  resolved "http://r.npm.sankuai.com/optimist/download/optimist-0.3.7.tgz#c90941ad59e4273328923074d2cf2e7cbc6ec0d9"
+  dependencies:
+    wordwrap "~0.0.2"
+
 os-homedir@^1.0.0, os-homedir@^1.0.1:
   version "1.0.2"
   resolved "http://r.npm.sankuai.com/os-homedir/download/os-homedir-1.0.2.tgz#ffbc4988336e0e833de0c168c7ef152121aa7fb3"
@@ -825,6 +928,18 @@ prebuild@^4.1.1:
 process-nextick-args@~1.0.6:
   version "1.0.7"
   resolved "http://r.npm.sankuai.com/process-nextick-args/download/process-nextick-args-1.0.7.tgz#150e20b756590ad3f91093f25a4f2ad8bff30ba3"
+
+promise@^6.0.1:
+  version "6.1.0"
+  resolved "http://r.npm.sankuai.com/promise/download/promise-6.1.0.tgz#2ce729f6b94b45c26891ad0602c5c90e04c6eef6"
+  dependencies:
+    asap "~1.0.0"
+
+promise@~2.0:
+  version "2.0.0"
+  resolved "http://r.npm.sankuai.com/promise/download/promise-2.0.0.tgz#46648aa9d605af5d2e70c3024bf59436da02b80e"
+  dependencies:
+    is-promise "~1"
 
 prr@~0.0.0:
   version "0.0.0"
@@ -956,6 +1071,18 @@ sntp@1.x.x:
   dependencies:
     hoek "2.x.x"
 
+source-map@0.4.x:
+  version "0.4.4"
+  resolved "http://r.npm.sankuai.com/source-map/download/source-map-0.4.4.tgz#eba4f5da9c0dc999de68032d8b4f76173652036b"
+  dependencies:
+    amdefine ">=0.0.4"
+
+source-map@~0.1.7:
+  version "0.1.43"
+  resolved "http://r.npm.sankuai.com/source-map/download/source-map-0.1.43.tgz#c24bc146ca517c1471f5dacbe2571b2b7f9e3346"
+  dependencies:
+    amdefine ">=0.0.4"
+
 sprintf-js@~1.0.2:
   version "1.0.3"
   resolved "http://r.npm.sankuai.com/sprintf-js/download/sprintf-js-1.0.3.tgz#04e6926f662895354f3dd015203633b857297e2c"
@@ -1035,6 +1162,14 @@ tough-cookie@~2.3.0:
   dependencies:
     punycode "^1.4.1"
 
+transformers@2.1.0:
+  version "2.1.0"
+  resolved "http://r.npm.sankuai.com/transformers/download/transformers-2.1.0.tgz#5d23cb35561dd85dc67fb8482309b47d53cce9a7"
+  dependencies:
+    css "~1.0.8"
+    promise "~2.0"
+    uglify-js "~2.2.5"
+
 tunnel-agent@~0.4.1:
   version "0.4.3"
   resolved "http://r.npm.sankuai.com/tunnel-agent/download/tunnel-agent-0.4.3.tgz#6373db76909fe570e08d73583365ed828a74eeeb"
@@ -1042,6 +1177,13 @@ tunnel-agent@~0.4.1:
 tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   version "0.14.3"
   resolved "http://r.npm.sankuai.com/tweetnacl/download/tweetnacl-0.14.3.tgz#3da382f670f25ded78d7b3d1792119bca0b7132d"
+
+uglify-js@~2.2.5:
+  version "2.2.5"
+  resolved "http://r.npm.sankuai.com/uglify-js/download/uglify-js-2.2.5.tgz#a6e02a70d839792b9780488b7b8b184c095c99c7"
+  dependencies:
+    optimist "~0.3.5"
+    source-map "~0.1.7"
 
 unzip-response@^1.0.0:
   version "1.0.2"
@@ -1069,11 +1211,26 @@ verror@1.3.6:
   dependencies:
     extsprintf "1.0.2"
 
+void-elements@~2.0.1:
+  version "2.0.1"
+  resolved "http://r.npm.sankuai.com/void-elements/download/void-elements-2.0.1.tgz#c066afb582bb1cb4128d60ea92392e94d5e9dbec"
+
 which@1:
   version "1.2.12"
   resolved "http://r.npm.sankuai.com/which/download/which-1.2.12.tgz#de67b5e450269f194909ef23ece4ebe416fa1192"
   dependencies:
     isexe "^1.1.1"
+
+with@~4.0.0:
+  version "4.0.3"
+  resolved "http://r.npm.sankuai.com/with/download/with-4.0.3.tgz#eefd154e9e79d2c8d3417b647a8f14d9fecce14e"
+  dependencies:
+    acorn "^1.0.1"
+    acorn-globals "^1.0.3"
+
+wordwrap@~0.0.2:
+  version "0.0.3"
+  resolved "http://r.npm.sankuai.com/wordwrap/download/wordwrap-0.0.3.tgz#a3d5da6cd5c0bc0008d37234bbaf1bed63059107"
 
 wrappy@1:
   version "1.0.2"

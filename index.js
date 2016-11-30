@@ -1,4 +1,5 @@
 const http   = require('http');
+const jade   = require('jade');
 const level  = require('level');
 
 const kelp   = require('kelp');
@@ -8,7 +9,7 @@ const route  = require('kelp-route');
 const serve  = require('kelp-static');
 const logger = require('kelp-logger');
 const config = require('kelp-config');
-
+const render = require('kelp-render');
 
 const app = kelp();
 
@@ -18,19 +19,36 @@ app.use(logger);
 app.use(send);
 app.use(body);
 app.use(serve('public'));
+app.use(render({
+  templates: 'views',
+  extension: 'jade' ,
+  compiler : function(content, filename){
+    return function(locals){
+      return jade.renderFile(filename, locals);
+    }
+  }
+}));
 
-app.use(route('post', '/create', function(req, res){
-  db.put(req.body.number, req.body.password, function(err){
-    console.log(err);
-    res.send(err);
+app.use(route('get', '/', function(req, res){
+  var query = req.query.q;
+  db.get(query, function(err, password){
+    res.render('index', { 
+      response: query,
+      password: password
+    });
   });
 }));
 
-app.use(route('get', '/query', function(req, res){
-  db.get(req.query.q, function(err, password){
-    if(err) res.send(err);
-    else res.send(password);
-  });
+app.use(route('/submit', function(req, res){
+  if(req.body){
+    var key = req.body.number;
+    var val = req.body.password;
+    db.put(key, val, function(err){
+      res.render('submit', { response: !err });
+    });
+  }else{
+    res.render('submit');
+  }
 }));
 
 app.use(function(req, res){
