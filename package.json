@@ -1,0 +1,19 @@
+{
+  "name": "ofo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:song940/ofo.git",
+  "author": "Lsong <song940@gmail.com>",
+  "license": "MIT",
+  "description": "free bike for everyone",
+  "dependencies": {
+    "kelp": "^1.0.5",
+    "kelp-body": "^1.2.0",
+    "kelp-config": "^1.2.3",
+    "kelp-logger": "^1.1.0",
+    "kelp-route": "^2.0.0",
+    "kelp-send": "^1.0.2",
+    "kelp-static": "^1.0.1",
+    "level": "^1.5.0"
+  }
+}

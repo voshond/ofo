@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ofo 共享单车</title>
+  <style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    font-size: 14px;
+    background-color: #ffdb00;
+  }
+  .title{
+    color: white;
+    font-size: 10rem;
+    text-align: center;
+    font-family: Conv_Bauhausl,sans-serif;
+  }
+  .hero{
+    color: white;
+    font-size: 5rem;
+    margin: 2rem;
+    text-align: center;
+  }
+  .form{
+    width: 50%;
+    margin: auto;
+    padding: 2rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    text-align: center;
+    background-color: white;
+  }
+  .input{
+    outline: 0;
+    padding: 1rem;
+    font-size: 4rem;
+    font-family: monospace;
+    text-align: center;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  .input-block{
+    width: 100%;
+    display: block;
+  }
+  .btn{
+    color: white;
+    padding: 1rem;
+    font-size: 2rem;
+    border: 1px solid #ccc;
+    background: #ffdb00;
+  }
+  .btn-block{
+    width: 100%;
+    display: block;
+  }
+  footer{
+    display: block;
+    margin: 2rem auto;
+  }
+  nav{
+    text-align: center;
+    display: block;
+  }
+  a{
+    color: white;
+  }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="title">ofo</h1>
+  </header>
+  <main>
+    <h1 class="hero">随时随地免费骑</h1>
+    <form class="form" method="post" action="/create">
+      <input name="number" type="number" class="input input-block" placeholder="请输入车牌号" >
+      <input name="password" type="number" class="input input-block" placeholder="请输入密码" >
+      <button class="btn btn-block">提交</button>
+    </form>
+  </main>
+  <footer>
+    <nav>
+      <a href="/tos.html">免责条款</a>
+      <a href="/submit">提交数据</a>
+    </nav>
+  </footer>
+</body>
+</html>
