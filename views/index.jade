@@ -4,12 +4,13 @@ block content
   h1.hero 随时随地免费骑
   if response
     if password
-      p.info=password
+      p.info 密码是 #{password}, 祝您使用愉快 ^_^
     else
       p.info
         | 抱歉, 我们不知道 #{query} 对应的密码, 如果您知道请
-        a(href='/submit') 告诉我们
+        a(href='/submit?number=#{query}') 告诉我们
         | 。
-  form.form
-    input.input.input-block(name='q', value=query type='text', pattern='[0-9]{6}', maxlength='8', placeholder='请输入车牌号', required='')
-    button.btn.btn-block 立即用车
+  else
+    form.form
+      input.input.input-block(name='q', value=query type='text', pattern='[0-9]{6}', maxlength='8', placeholder='请输入车牌号', required='')
+      button.btn.btn-block 立即用车
