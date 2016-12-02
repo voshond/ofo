@@ -13,6 +13,11 @@ body{
   text-align: center;
   font-family: Conv_Bauhausl,sans-serif;
 }
+.title a{
+  font-family: sans-serif;
+  font-weight: lighter;
+  text-decoration: none;
+}
 .hero{
   color: white;
   font-size: 5rem;
@@ -44,7 +49,7 @@ body{
 .input{
   outline: 0;
   padding: 1rem;
-  font-size: 4rem;
+  font-size: 2rem;
   font-family: monospace;
   text-align: center;
   border: 1px solid #ccc;
@@ -98,13 +103,7 @@ a{
     border-radius: 3px;
   }
   .input, .btn{
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width: 768px){
-  .nav{
-    float: right;
-    display: inline-flex;
+    padding: .3rem;
+    font-size: 1.5rem;
   }
 }

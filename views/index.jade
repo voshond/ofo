@@ -4,7 +4,8 @@ block content
   h1.hero 随时随地免费骑
   if query
     if password
-      p.info 密码是 #{password}, 祝您使用愉快 ^_^
+      .info [#{query}] 的密码是 #{password},
+        p 祝您使用愉快 ^_^
     else
       p.info
         | 抱歉, 我们不知道 #{query} 对应的密码, 如果您知道请
