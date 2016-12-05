@@ -31,11 +31,16 @@ app.use(render({
 
 app.use(route('/', function(req, res){
   var query = req.query.q;
+  var accept = req.headers.accept;
   db.get(query, function(err, password){
-    res.render('index', { 
-      query   : query,
-      password: password
-    });
+    if(~accept.indexOf('text/html')){
+      res.render('index', {
+        query   : query,
+        password: password
+      });
+    }else{
+      res.send(password);
+    }
   });
 }));
 
