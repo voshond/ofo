@@ -46,14 +46,14 @@ app.use(route('/', function(req, res){
 
 app.use(route('/submit', function(req, res){
   if(req.body){
-    var key = req.body.number;
+    var key = req.body.q;
     var val = req.body.password;
     db.put(key, val, function(err){
       res.render('submit', { success: !err });
     });
   }else{
     res.render('submit', { 
-      query: req.query.number 
+      query: req.query.q
     });
   }
 }));

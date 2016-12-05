@@ -1,14 +1,16 @@
 ;(function(exports, undefined){
   
-  function redirect(url){
-    location.href = url;
-  }
-  
   exports.recognize = function recognize(file){
+    var loading = document.getElementById('loading');
+    loading.style.display = 'fixed';
     Tesseract
     .recognize(file)
+    .progress(function(info){
+      info = info.status + '('+ Math.floor(parseFloat(info.progress) * 100) +'%)';
+      loading.innerText = info;
+    })
     .then(function(data){
-      redirect('/?q=' + data.text.match(/\d{6}/)[0]);
+      location.href = '/?q=' + data.text.match(/\d{6}/)[0];
     });
   }
   
