@@ -52,7 +52,9 @@ app.use(route('/submit', function(req, res){
       res.render('submit', { success: !err });
     });
   }else{
-    res.render('submit');
+    res.render('submit', { 
+      query: req.query.number 
+    });
   }
 }));
 
