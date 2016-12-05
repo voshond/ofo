@@ -13,5 +13,7 @@ block content
         | 。
   else
     form.form
-      input.input.input-block(name='q', value=query type='number', pattern='[0-9]*', maxlength='8', placeholder='请输入车牌号', required)
+      .input-group
+        input.input.input-block(name='q', value=query type='number', pattern='[0-9]*', maxlength='8', placeholder='请输入车牌号', required)
+        input(type='file', onchange="recognize(this.files[0])")
       button.btn.btn-block 立即用车

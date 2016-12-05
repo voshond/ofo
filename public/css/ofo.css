@@ -85,7 +85,39 @@ nav a{
 a{
   color: white;
 }
+.input-group{
+  position: relative;
+}
 
+input[type=file]{
+  top: 30%;
+  right: 3%;
+  outline: 0;
+  width: 30px;
+  height: 20px;
+  z-index: 999;
+  overflow: hidden;
+  position: absolute;
+  border: 1px solid #ccc;
+  color: transparent;
+}
+input[type=file]::-webkit-file-upload-button {
+  visibility: hidden;
+}
+input[type=file]:before{
+  content: '';
+  -webkit-user-select: none;
+}
+input[type=file]:after{
+  top: 24%;
+  color: #999;
+  width: 100%;
+  height: 5px;
+  font-size: 8px;
+  content: '123456';
+  position: absolute;
+  border-bottom: 1px dashed red;
+}
 
 @media screen and (max-width: 768px){
   header{
