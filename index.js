@@ -1,6 +1,6 @@
 const http   = require('http');
 const jade   = require('jade');
-const level  = require('level');
+const zdb    = require('zdb');
 
 const kelp   = require('kelp');
 const body   = require('kelp-body');
@@ -13,7 +13,7 @@ const render = require('kelp-render');
 
 const app = kelp();
 
-const db = level('ofo.db');
+const db = zdb('ofo.db');
 
 app.use(send);
 app.use(body);
