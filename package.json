@@ -10,9 +10,10 @@
   "license": "MIT",
   "description": "free bike for everyone",
   "dependencies": {
+    "flat-file-db": "^1.0.0",
     "jade": "^1.11.0",
     "kelp": "^1.0.5",
-    "kelp-body": "^1.2.0",
+    "kelp-body": "^1.2.2",
     "kelp-config": "^1.2.3",
     "kelp-logger": "^1.1.0",
     "kelp-render": "^1.0.1",
