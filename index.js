@@ -1,6 +1,6 @@
-const http     = require('http');
-const jade     = require('jade');
-const flatfile = require('flat-file-db');
+const zdb  = require('zdb');
+const http = require('http');
+const jade = require('jade');
 
 const kelp   = require('kelp');
 const body   = require('kelp-body');
@@ -13,7 +13,7 @@ const render = require('kelp-render');
 
 const app = kelp();
 
-const db = flatfile('ofo.db');
+const db = new zdb.JSON('ofo.db');
 
 app.use(send);
 app.use(body);
@@ -32,15 +32,16 @@ app.use(render({
 app.use(route('/', function(req, res){
   var query = req.query.q;
   var accept = req.headers.accept;
-  var password = db.get(query);
-  if(~accept.indexOf('text/html')){
-    res.render('index', {
-      query   : query,
-      password: password
-    });
-  }else{
-    res.send(password);
-  }
+  db.get(query, function(err, password){
+    if(~accept.indexOf('text/html')){
+      res.render('index', {
+        query   : query,
+        password: password
+      });
+    }else{
+      res.send(password);
+    }
+  });
 }));
 
 app.use(route('/submit', function(req, res){

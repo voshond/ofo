@@ -10,7 +10,6 @@
   "license": "MIT",
   "description": "free bike for everyone",
   "dependencies": {
-    "flat-file-db": "^1.0.0",
     "jade": "^1.11.0",
     "kelp": "^1.0.5",
     "kelp-body": "^1.2.2",
@@ -22,6 +21,6 @@
     "kelp-static": "^1.0.1",
     "level": "^1.5.0",
     "lowdb": "^0.14.0",
-    "zdb": "^1.0.0"
+    "zdb": "^1.0.1"
   }
 }
