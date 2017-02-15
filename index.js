@@ -33,7 +33,7 @@ app.use(route('/', function(req, res){
   var query = req.query.q;
   var accept = req.headers.accept;
   db.get(query, function(err, password){
-    if(~accept.indexOf('text/html')){
+    if(accept && ~accept.indexOf('text/html')){
       res.render('index', {
         query   : query,
         password: password
