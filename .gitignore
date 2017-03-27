@@ -1,4 +1,5 @@
 
 *.log
+config/development.*
 
 node_modules/
