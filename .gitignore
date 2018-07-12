@@ -1,5 +1,5 @@
 
 *.log
-config/development.*
+*.db
 
 node_modules/

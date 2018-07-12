@@ -19,6 +19,6 @@
     "kelp-route": "*",
     "kelp-send": "*",
     "kelp-static": "*",
-    "zdb": "*"
+    "level": "*"
   }
 }

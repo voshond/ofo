@@ -1,19 +1,19 @@
-const zdb  = require('zdb');
 const http = require('http');
 const jade = require('jade');
+const level = require('level');
 
-const kelp   = require('kelp');
-const body   = require('kelp-body');
-const send   = require('kelp-send');
-const route  = require('kelp-route');
-const serve  = require('kelp-static');
+const kelp = require('kelp');
+const body = require('kelp-body');
+const send = require('kelp-send');
+const route = require('kelp-route');
+const serve = require('kelp-static');
 const logger = require('kelp-logger');
 const config = require('kelp-config');
 const render = require('kelp-render');
 
 const app = kelp();
 
-const db = new zdb.JSON('ofo.db');
+const db = level('ofo.db');
 
 app.use(send);
 app.use(body);
@@ -21,52 +21,45 @@ app.use(logger);
 app.use(serve('public'));
 app.use(render({
   templates: 'views',
-  extension: 'jade' ,
-  compiler : function(content, filename){
-    return function(locals){
+  extension: 'jade',
+  compiler: function (content, filename) {
+    return function (locals) {
       return jade.renderFile(filename, locals);
     }
   }
 }));
 
-app.use(route('/', function(req, res){
-  var query = req.query.q;
-  var accept = req.headers.accept;
-  db.get(query, function(err, password){
-    if(accept && ~accept.indexOf('text/html')){
-      res.render('index', {
-        query   : query,
-        password: password
-      });
-    }else{
-      res.send(password);
-    }
-  });
-}));
-
-app.use(route('/submit', function(req, res){
-  if(req.body){
-    var key = req.body.q;
-    var val = req.body.password;
-    db.put(key, val, function(err){
-      res.render('submit', { success: !err });
-    });
-  }else{
-    res.render('submit', { 
-      query: req.query.q
-    });
+app.use(route('/', async (req, res) => {
+  const { q: query } = req.query;
+  const { accept } = req.headers;
+  let password;
+  if(query) password = await db.get(query);
+  if (accept && ~accept.indexOf('text/html')) {
+    res.render('index', { query, password });
+  } else {
+    res.send(password);
   }
 }));
 
-app.use(route('/tos', function(req, res){
-  res.render('terms');
+app.use(route('/submit', async (req, res) => {
+  const { q: query } = req.query;
+  const { number, password } = (req.body || {});
+  if (number && password) {
+    db.put(number, password, err => {
+      res.render('submit', { success: !err });
+    });
+  } else {
+    res.render('submit', { query });
+  }
 }));
 
-app.use(function(req, res){
-  res.send(404);
-});
+app.use(route('/tos', (_, res) => 
+  res.render('terms')
+));
+
+app.use((_, res) => res.send(404));
 
 const server = http.createServer(app);
-server.listen(config.port, function(err){
+server.listen(config.port, function (err) {
   console.log('server is running at %s', server.address().port);
 });
